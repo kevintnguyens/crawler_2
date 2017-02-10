@@ -1,0 +1,5 @@
+Invalid Links: 450Invalid Links: 950Invalid Links: 90
+Page With Most Outbound Links: http://www.ics.uci.edu/grad/resources/ugrad/degrees/policies/computing/account/forms/admissions/courses/funding/index.php with 121 links
+
+Subdomain Counts:
+www.ics.uci.edu: 1

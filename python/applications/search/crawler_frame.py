@@ -41,6 +41,8 @@ class CrawlerFrame(IApplication):
         self.frame = frame
         assert(self.UserAgentString != None)
         assert(self.app_id != "")
+        
+        self.invalidLinks = 0
         if len(url_count) >= MAX_LINKS_TO_DOWNLOAD:
             self.done = True
 
@@ -69,7 +71,7 @@ class CrawlerFrame(IApplication):
     def writeAnalyticsToFile(self):
         with open('analytics.txt', 'a') as anaFile:
             anaFile.write('Invalid Links: '+str(self.invalidLinks))
-            anaFile.write('\nAverage Download Time: '+str(round((time()-self.starttime), 2)/url_count)+' Seconds')
+            #anaFile.write('\nAverage Download Time: '+str(round((time()-self.starttime), 2)/url_count)+' Seconds')
             anaFile.write('\nPage With Most Outbound Links: '+mostOutboundLinks[0]+' with '+str(mostOutboundLinks[1])+' links')
             anaFile.write('\n\nSubdomain Counts:')
 
@@ -82,7 +84,7 @@ class CrawlerFrame(IApplication):
     #our code
     def shutdown(self):
         print "downloaded ", len(url_count), " in ", time() - self.starttime, " seconds."
-        writeAnalyticsToFile()
+        self.writeAnalyticsToFile()
         pass
 
 def save_count(urls):
