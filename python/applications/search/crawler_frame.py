@@ -7,7 +7,7 @@ import re, os
 from time import time
 import urlparse
 import cgi
-
+from bs4 import BeautifulSoup
 try:
     # For python 2
     from urlparse import urlparse, parse_qs
@@ -82,6 +82,7 @@ class CrawlerFrame(IApplication):
     #our code
     def shutdown(self):
         print "downloaded ", len(url_count), " in ", time() - self.starttime, " seconds."
+        writeAnalyticsToFile()
         pass
 
 def save_count(urls):
@@ -125,8 +126,8 @@ def extract_next_links(rawDatas):
         for tag in soup.findAll('a',href=True):
             url=strip_anchor(tag['href'])
             parsed = urlparse(tag['href'])
-            '''
-            org_parsed = urlparse(item[0])
+            
+            org_parsed = urlparse(item.url)
             #if url does begin with http or https. It its an absolute url
             if parsed.scheme in set(["http", "https"]):
                 outputLinks.append(tag['href'])
@@ -142,17 +143,17 @@ def extract_next_links(rawDatas):
         
             else:
                 #append # , ? and everything else to current url
-                outputLinks.append(item[0]+'/'+tag['href'])
+                outputLinks.append(item.url+'/'+tag['href'])
             
             tagCount += 1
-            '''
+            
         # Update for Part 3 in analytics
         if tagCount > mostOutboundLinks[1]:
-            mostOutboundLinks = (item[0], tagCount)
+            mostOutboundLinks = (item.url, tagCount)
 
         # Track subdomains for analytics
-        itemSubdomain = (urlparse(item[0])).hostname
-        itemPath = (urlparse(item[0])).path
+        itemSubdomain = (urlparse(item.url)).hostname
+        itemPath = (urlparse(item.url)).path
 
         if itemSubdomain in subdomains:
             # subdomain exists
