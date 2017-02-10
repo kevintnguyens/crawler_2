@@ -8,6 +8,7 @@ from time import time
 import urlparse
 import cgi
 from bs4 import BeautifulSoup
+from urlparse import urljoin
 try:
     # For python 2
     from urlparse import urlparse, parse_qs
@@ -124,30 +125,43 @@ def extract_next_links(rawDatas):
     
     for item in rawDatas:
         tagCount = 0
-        soup = BeautifulSoup(item.content, 'lxml')
-        for tag in soup.findAll('a',href=True):
-            url=strip_anchor(tag['href'])
-            parsed = urlparse(tag['href'])
+        #we dont care about the url if redirect. set it as final url
+        if(item.final_url != None):
+            item.url=item.final_url
+        #only grab succesful urls or redirects then we can continue
+        if(200<=item.http_code and item.http_code<400):
             
-            org_parsed = urlparse(item.url)
-            #if url does begin with http or https. It its an absolute url
-            if parsed.scheme in set(["http", "https"]):
-                outputLinks.append(tag['href'])
-                
-            #rel link that begins with  only / replace path with new path
-            elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]!='/' :
-                
-                outputLinks.append(org_parsed.scheme+org_parsed.netloc+tag['href'])
-                
-            #path is // replace hostname with this keep the scheme
-            elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]=='/':
-                outputLinks.append(org_parsed.scheme+tag['href'])
-        
-            else:
-                #append # , ? and everything else to current url
-                outputLinks.append(item.url+'/'+tag['href'])
             
-            tagCount += 1
+            soup = BeautifulSoup(item.content, 'lxml')
+            for tag in soup.findAll('a',href=True):
+                
+                url=strip_anchor(tag['href'])
+                
+                #arsed = urlparse((tag['href']))
+
+                
+                current_url=clean_path(url)
+                #print(urljoin(current_url,tag['href']))
+                outputLinks.append(urljoin(current_url,tag['href']))
+                #if url does begin with http or https. It itsh an absolute url
+                '''
+                if parsed.scheme in set(["http", "https"]):
+                    outputLinks.append(tag['href'])
+                    
+                #rel link that begins with  only / replace path with new path
+                elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]!='/' :
+                    
+                    outputLinks.append(org_parsed.scheme+org_parsed.netloc+tag['href'])
+                    
+                #path is // replace hostname with this keep the scheme
+                elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]=='/':
+                    outputLinks.append(org_parsed.scheme+tag['href'])
+            
+                else:
+                    #append # , ? and everything else to current url
+                    outputLinks.append(item.url+'/'+tag['href'])
+                '''
+                tagCount += 1
             
         # Update for Part 3 in analytics
         if tagCount > mostOutboundLinks[1]:
@@ -170,7 +184,7 @@ def extract_next_links(rawDatas):
         else:
             # subdomain does not exist, create default
             subdomains[itemSubdomain] = {itemPath: 1}
-    
+    print(outputLinks)
     return outputLinks
 #given a url. return the query in dictonary
 def query_dict(url):
@@ -182,6 +196,22 @@ def query_dict(url):
     except Exception as e:
         print str(e)
         return ''
+#given a full base url with htttp etc.. clean it so we can url join  
+def clean_path(url):
+    parsed=urlparse(url)
+    stack=[]
+    new_path=''
+    for path in parsed.path.split('/'):
+        
+        if path=='.':
+            pass
+        elif path=='..' and len(stack)!=0:
+            stack.pop()
+        else:
+            stack.append(path)
+    new_path='/'.join(stack)
+    #returns a new built url
+    return parsed.scheme+'://'+parsed.netloc+new_path+parsed.query
 
 #check repeating directory. If a directory path is repeated x amount of times or a string. Its a trap
 def check_rep(url, x=3):
@@ -189,9 +219,13 @@ def check_rep(url, x=3):
     #get rel path
     rel_path=parsed.path
     path_count=dict()
+    #split by path
     for path in rel_path.split('/'):
         if path in path_count:
             path_count[path]+=1
+            #prevent from adding relative path
+            if (path=='..' or path=='.'):
+                return True
             if path_count[path]>x:
                 with open('traps.txt', 'a') as anaFile:
                     anaFile.write('traps:'+str(parsed.hostname)+str(parsed.path)+'\t Reapeated path\n')
@@ -218,12 +252,14 @@ def check_trap(url, x=5):
     
     if possible_trap:
 #        return 1
-      if parsed.hostname in subdomains:               
+      if parsed.hostname in subdomains:
+            # if len is 1. then its a unique identfier
+             if len(querys)==1:
+                 #check if it is one the found unique identifer
+                 for exception in exceptions:
                  
-             for exception in exceptions:
-                 
-                 if exception in querys:
-                     return 0
+                     if exception in querys:
+                         return 0
              if parsed.path in subdomains[parsed.hostname]:
                  if subdomains[parsed.hostname][parsed.path] >= x:
                      with open('traps.txt', 'a') as anaFile:
@@ -242,9 +278,11 @@ def is_valid(url):
 
     This is a great place to filter out crawler traps.
     '''
-    url=strip_anchor(url)
-    parsed = urlparse(url)
 
+    url=strip_anchor(url)
+    url=clean_path(url)
+    parsed = urlparse(url)
+    
     #query_dict(url)
     if parsed.scheme not in set(["http", "https"]):
         return False
@@ -264,4 +302,5 @@ def is_valid(url):
             + "|rm|smil|wmv|swf|wma|zip|rar|gz)$", parsed.path.lower())
 
     except TypeError:
+        
         print ("TypeError for ", parsed)
