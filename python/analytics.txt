@@ -62,4 +62,15 @@ www.ics.uci.edu: 1Invalid Links: 106
 Page With Most Outbound Links: http://www.ics.uci.edu/grad/resources/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/admissions/courses/funding/index.php with 131 links
 
 Subdomain Counts:
-www.ics.uci.edu: 1
+www.ics.uci.edu: 1Invalid Links: 106
+Page With Most Outbound Links: http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/degrees/courses/forms/index.php with 131 links
+
+Subdomain Counts:
+www.ics.uci.edu: 1Invalid Links: 38
+Page With Most Outbound Links: http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/degrees/courses/admissions/funding/index.php with 132 links
+
+Subdomain Counts:
+www.ics.uci.edu: 1Invalid Links: 0
+Page With Most Outbound Links: url with 0 links
+
+Subdomain Counts:

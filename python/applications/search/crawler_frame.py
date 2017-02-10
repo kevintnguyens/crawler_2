@@ -131,7 +131,7 @@ def extract_next_links(rawDatas):
         #only grab succesful urls or redirects then we can continue
         if(200<=item.http_code and item.http_code<400):
             
-            
+            current_url=clean_path(item.url)
             soup = BeautifulSoup(item.content, 'lxml')
             for tag in soup.findAll('a',href=True):
                 
@@ -140,7 +140,7 @@ def extract_next_links(rawDatas):
                 #arsed = urlparse((tag['href']))
 
                 
-                current_url=clean_path(url)
+                
                 #print(urljoin(current_url,tag['href']))
                 outputLinks.append(urljoin(current_url,tag['href']))
                 #if url does begin with http or https. It itsh an absolute url
@@ -184,7 +184,7 @@ def extract_next_links(rawDatas):
         else:
             # subdomain does not exist, create default
             subdomains[itemSubdomain] = {itemPath: 1}
-    print(outputLinks)
+    
     return outputLinks
 #given a url. return the query in dictonary
 def query_dict(url):
@@ -282,17 +282,14 @@ def is_valid(url):
     url=strip_anchor(url)
     url=clean_path(url)
     parsed = urlparse(url)
-    
-    #query_dict(url)
+
     if parsed.scheme not in set(["http", "https"]):
         return False
     if check_trap(url):
         return False
     if check_rep(url):
         return False
-    parsed = urlparse(url)
-    if parsed.scheme not in set(["http", "https"]):
-        return False
+
     try:
         return ".ics.uci.edu" in parsed.hostname \
             and not re.match(".*\.(css|js|bmp|gif|jpe?g|ico" + "|png|tiff?|mid|mp2|mp3|mp4"\

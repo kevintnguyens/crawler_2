@@ -1905,3 +1905,5 @@ http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policie
 http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/funding/admissions/about/visit/funding/degrees/admissions/index.php
 http://www.ics.uci.edu/grad/resources/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/degrees/policies/index.php
 http://www.ics.uci.edu/grad/resources/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/admissions/courses/funding/index.php
+http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/degrees/courses/forms/index.php
+http://www.ics.uci.edu/grad/resources.php/about/search/computing/account/policies/admissions/courses/forms/forms/computing/account/about/visit/funding/admissions/courses/degrees/courses/admissions/funding/index.php
