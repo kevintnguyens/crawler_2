@@ -78,7 +78,7 @@ class CrawlerFrame(IApplication):
 
             # Print out count of subdomains
             for sub in subdomains:
-                subcount = len(subdomainss[sub])
+                subcount = len(subdomains[sub])
                 #for path in subdomains[sub]:
                 #    subcount += subdomains[sub][path]
                 anaFile.write('\n'+str(sub)+': '+str(subcount))
@@ -144,11 +144,12 @@ def extract_next_links(rawDatas):
                 #url join the path. If the path is absolute it will the taken the second value
                 #if it begins with / it replaces the current path
                 #if it begins with anything else. it will cleanly join
-                
-                outputLinks.append(urljoin(current_url,url))
+                #ignore mailto and tel links.
+                if 'mailto:' not in url and 'tel:'  not in url: 
+                    outputLinks.append(urljoin(current_url,url))
 
                 #keep track of the current the tag amount for current url
-                tagCount += 1
+                    tagCount += 1
             
         # Update for Part 3 in analytics
         if tagCount > mostOutboundLinks[1]:
