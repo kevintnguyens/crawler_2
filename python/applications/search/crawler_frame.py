@@ -78,9 +78,9 @@ class CrawlerFrame(IApplication):
 
             # Print out count of subdomains
             for sub in subdomains:
-                subcount = 0
-                for path in subdomains[sub]:
-                    subcount += subdomains[sub][path]
+                subcount = len(subdomainss[sub])
+                #for path in subdomains[sub]:
+                #    subcount += subdomains[sub][path]
                 anaFile.write('\n'+str(sub)+': '+str(subcount))
     #our code
     def shutdown(self):
@@ -108,6 +108,7 @@ STUB FUNCTIONS TO BE FILLED OUT BY THE STUDENT.
 def extract_next_links(rawDatas):
     outputLinks = list()
     #global mostOutboundLinks
+    #variables to keep track of information for analytics and is valid
     global mostOutboundLinks
     global subdomains
     '''
@@ -130,37 +131,23 @@ def extract_next_links(rawDatas):
             item.url=item.final_url
         #only grab succesful urls or redirects then we can continue
         if(200<=item.http_code and item.http_code<400):
-            
+            #get current url
             current_url=clean_path(item.url)
             soup = BeautifulSoup(item.content, 'lxml')
+            #find all url tags from a tags
             for tag in soup.findAll('a',href=True):
-                
+
+                #get the current tag href url
                 url=strip_anchor(tag['href'])
                 
-                #arsed = urlparse((tag['href']))
+                
+                #url join the path. If the path is absolute it will the taken the second value
+                #if it begins with / it replaces the current path
+                #if it begins with anything else. it will cleanly join
+                
+                outputLinks.append(urljoin(current_url,url))
 
-                
-                
-                #print(urljoin(current_url,tag['href']))
-                outputLinks.append(urljoin(current_url,tag['href']))
-                #if url does begin with http or https. It itsh an absolute url
-                '''
-                if parsed.scheme in set(["http", "https"]):
-                    outputLinks.append(tag['href'])
-                    
-                #rel link that begins with  only / replace path with new path
-                elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]!='/' :
-                    
-                    outputLinks.append(org_parsed.scheme+org_parsed.netloc+tag['href'])
-                    
-                #path is // replace hostname with this keep the scheme
-                elif len(tag['href'])>1 and tag['href'][0]=='/' and tag['href'][1]=='/':
-                    outputLinks.append(org_parsed.scheme+tag['href'])
-            
-                else:
-                    #append # , ? and everything else to current url
-                    outputLinks.append(item.url+'/'+tag['href'])
-                '''
+                #keep track of the current the tag amount for current url
                 tagCount += 1
             
         # Update for Part 3 in analytics
