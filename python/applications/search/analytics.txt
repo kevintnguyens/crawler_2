@@ -1,0 +1,10 @@
+Invalid Links: 58
+Page With Most Outbound Links: http://www.ics.uci.edu/faculty/profiles/view_faculty.php?ucinetid=dutt with 85 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 1
+checkin.ics.uci.edu: 1
+flamingo.ics.uci.edu: 2
+graphmod.ics.uci.edu: 2
+vision.ics.uci.edu: 1
+www.ics.uci.edu: 5
