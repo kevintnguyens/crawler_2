@@ -102,6 +102,7 @@ def process_url_group(group, useragentstr):
 STUB FUNCTIONS TO BE FILLED OUT BY THE STUDENT.
 '''
 def extract_next_links(rawDatas):
+    #most up 2 date
     outputLinks = list()
     #global mostOutboundLinks
     #variables to keep track of information for analytics and is valid
