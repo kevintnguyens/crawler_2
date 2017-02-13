@@ -1,0 +1,297 @@
+Invalid Links: 4757
+Page With Most Outbound Links: http://fano.ics.uci.edu/cites/Organization/ with 929 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 8
+flamingo.ics.uci.edu: 2
+cert.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 4
+sli.ics.uci.edu: 2
+fano.ics.uci.edu: 4
+ngs.ics.uci.edu: 6
+mondego.ics.uci.edu: 4
+graphics.ics.uci.edu: 2
+evoke.ics.uci.edu: 4
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+students.ics.uci.edu: 2
+psearch.ics.uci.edu: 1
+fr.ics.uci.edu: 1
+computableplant.ics.uci.edu: 3
+seal.ics.uci.edu: 5
+sdcl.ics.uci.edu: 4
+www.ics.uci.edu: 437
+grape.ics.uci.edu: 1
+isr.uci.edu: 1
+sprout.ics.uci.edu: 2
+asterix.ics.uci.edu: 1
+cml.ics.uci.edu: 4
+cbcl.ics.uci.edu: 1
+vision.ics.uci.edu: 9
+emj.ics.uci.edu: 4
+ftp.ics.uci.edu: 2
+chenli.ics.uci.edu: 1
+honors.ics.uci.edu: 1
+None: 1Invalid Links: 7
+Page With Most Outbound Links: http://www.ics.uci.edu/~lueker/ with 13 links
+
+Subdomain Counts:
+www.ics.uci.edu: 5Invalid Links: 4842
+Page With Most Outbound Links: http://www.ics.uci.edu/about/annualreport/index.php with 105 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 8
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 1
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+pregelix.ics.uci.edu
+: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 1
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 583
+grape.ics.uci.edu: 2
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 1
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 22
+asterix.ics.uci.edu
+: 1
+emj.ics.uci.edu: 5
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+graphics.ics.uci.edu
+: 1
+cloudberry.ics.uci.edu
+: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 1Invalid Links: 4769
+Page With Most Outbound Links: http://www.ics.uci.edu/~dechter/courses/ics-271/fall-08/ with 19 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 8
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 1
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+pregelix.ics.uci.edu
+: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 1
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 578
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 1
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 22
+asterix.ics.uci.edu
+: 1
+emj.ics.uci.edu: 5
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+graphics.ics.uci.edu
+: 1
+cloudberry.ics.uci.edu
+: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 1Invalid Links: 4757
+Page With Most Outbound Links: url with 0 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 7
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 2
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 2
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 575
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 2
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 22
+emj.ics.uci.edu: 5
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 2Invalid Links: 4778
+Page With Most Outbound Links: http://emj.ics.uci.edu/papers/optimization-papers/ 
+with: 46 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 7
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 3
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 2
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 576
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 2
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 23
+emj.ics.uci.edu: 6
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 2Invalid Links: 4757
+Page With Most Outbound Links: url 
+with: 0 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 7
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 2
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 2
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 576
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 2
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 23
+emj.ics.uci.edu: 5
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 2Invalid Links: 4757
+Page With Most Outbound Links: url 
+with: 0 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 7
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 2
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 2
+computableplant.ics.uci.edu: 1
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 575
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 2
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 23
+emj.ics.uci.edu: 5
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 2Invalid Links: 4757
+Page With Most Outbound Links: url 
+with: 0 links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 7
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 9
+ngs.ics.uci.edu: 6
+evoke.ics.uci.edu: 1
+dataguard.ics.uci.edu: 1
+graphics.ics.uci.edu: 2
+mondego.ics.uci.edu: 5
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 3
+psearch.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 2
+computableplant.ics.uci.edu: 2
+ipubmed.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 575
+grape.ics.uci.edu: 1
+sprout.ics.uci.edu: 3
+asterix.ics.uci.edu: 2
+cml.ics.uci.edu: 6
+vision.ics.uci.edu: 23
+emj.ics.uci.edu: 6
+ftp.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+honors.ics.uci.edu: 1
+hombao.ics.uci.edu: 1
+pregelix.ics.uci.edu: 2

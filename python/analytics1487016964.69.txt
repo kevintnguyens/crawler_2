@@ -1,0 +1,9 @@
+Invalid Links: 113
+Page With Most Outbound Links: http://www.ics.uci.edu/~lab/lab_assistants/index.php 
+with: 88 
+links
+
+Subdomain Counts:
+ironwood.ics.uci.edu: 1
+sdcl.ics.uci.edu: 1
+www.ics.uci.edu: 11

@@ -1,0 +1,7 @@
+Invalid Links: 5
+Page With Most Outbound Links: https://login.uci.edu/ucinetid/webauth?return_url=http%3A%2F%2Fwww.ics.uci.edu%2Fcommunity%2Falumni%2Fmentor%2Fmentor_list.php 
+with: 5 
+links
+
+Subdomain Counts:
+login.uci.edu: 1

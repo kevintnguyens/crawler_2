@@ -4,12 +4,12 @@ from spacetime_local.IApplication import IApplication
 from spacetime_local.declarations import Producer, GetterSetter, Getter
 #from lxml import html,etree
 import re, os
-from time import time
+from time import time,asctime,time
 import urlparse
 import cgi
 from bs4 import BeautifulSoup
 from urlparse import urljoin
-
+#final push 2xxx links
 try:
     # For python 2
     from urlparse import urlparse, parse_qs
@@ -46,7 +46,7 @@ class CrawlerFrame(IApplication):
         self.invalidLinks = 0
         if len(url_count) >= MAX_LINKS_TO_DOWNLOAD:
             self.done = True
-
+        #self.read_file()
     def initialize(self):
         self.count = 0
         l = ProducedLink("http://www.ics.uci.edu", self.UserAgentString)
@@ -68,11 +68,76 @@ class CrawlerFrame(IApplication):
                     self.invalidLinks+=1
         if len(url_count) >= MAX_LINKS_TO_DOWNLOAD:
             self.done = True
-    def writeAnalyticsToFile(self):
-        with open('analytics.txt', 'a') as anaFile:
+    #look up succsefull urls when the app begins and store the information for use
+    #reads fom anayltics overall and url.txt and stores in variable
+            #only runs if true
+    def read_file(self,overwrite=False):
+            if False==overwrite:
+                return
+            global mostOutboundLinks
+            try:
+                file_r=open('successful_urls.txt','r')
+                for url in file_r:
+                    itemSubdomain = (urlparse(url.strip())).hostname
+                    itemPath = (urlparse(url.strip())).path
+
+                    if itemSubdomain in subdomains:
+                        # subdomain exists
+
+                        if itemPath in subdomains[itemSubdomain]:
+                            # path has been crawled, increment count
+                            subdomains[itemSubdomain][itemPath] += 1
+
+                        else:
+                            subdomains[itemSubdomain][itemPath] = 1
+                            
+                    else:
+                        # subdomain does not exist, create default
+                        subdomains[itemSubdomain] = {itemPath: 1}
+                #with open("successful_urls.txt", "a") as surls:
+                #   surls.write(("\n".join(urls) + "\n").encode("utf-8"))
+                file_r.close()
+            except Exception as e:
+                print e
+                pass
+            try:
+                file_r=open('analytics_overall.txt','r')
+                count=0
+                
+                for line in file_r:
+                    x=line.split(':',1)
+                    #print(x)
+                    if count==0:
+                        self.invalidLinks+=int(x[1])
+                    if count==1:
+                        
+                     if x[1] > mostOutboundLinks[1]:
+       
+                        mostOutboundLinks=(x[1].strip(),1)
+                    if count==2  and x[1] > mostOutboundLinks[1]:
+      
+                        mostOutboundLinks=(mostOutboundLinks[0],int(x[1]))
+                    count+=1
+                    if count==3:
+                        break;
+            except Exception as e:
+                    print(e)
+                    #print(mostOutboundLinks)
+                #print(subdomains)
+                    pass
+            
+            #print(mostOutboundLinks)
+    def writeAnalyticsToFile(self,file_name='analytics.txt',remove=False):
+        try:
+            if remove:
+                os.remove(file_name)
+                
+        except:
+            pass
+        with open(file_name, 'a') as anaFile:
             anaFile.write('Invalid Links: '+str(self.invalidLinks))
             #anaFile.write('\nAverage Download Time: '+str(round((time()-self.starttime), 2)/url_count)+' Seconds')
-            anaFile.write('\nPage With Most Outbound Links: '+mostOutboundLinks[0]+' with '+str(mostOutboundLinks[1])+' links')
+            anaFile.write('\nPage With Most Outbound Links: '+mostOutboundLinks[0]+' \nwith: '+str(mostOutboundLinks[1])+' \nlinks')
             anaFile.write('\n\nSubdomain Counts:')
 
             # Print out count of subdomains
@@ -83,7 +148,9 @@ class CrawlerFrame(IApplication):
                 anaFile.write('\n'+str(sub)+': '+str(subcount))
     def shutdown(self):
         print "downloaded ", len(url_count), " in ", time() - self.starttime, " seconds."
-        self.writeAnalyticsToFile()
+        self.writeAnalyticsToFile('analytics'+str(time())+'.txt')
+        self.read_file(True)
+        self.writeAnalyticsToFile('analytics_overall.txt',True)
         pass
 
 def save_count(urls):

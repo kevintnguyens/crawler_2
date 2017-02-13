@@ -1,0 +1,7 @@
+Invalid Links: 0
+Page With Most Outbound Links: http://www.ics.uci.edu/~goodrich/teach/ics8/hw/hw8.html 
+with: 1 
+links
+
+Subdomain Counts:
+www.ics.uci.edu: 2
