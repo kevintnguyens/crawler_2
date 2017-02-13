@@ -1,0 +1,15 @@
+Invalid Links: 0
+Page With Most Outbound Links: http://www.ics.uci.edu/~dock/manuals/sip/sipref.html with 461 links
+
+Subdomain Counts:
+tmbpro.ics.uci.edu: 2
+mupro.proteomics.ics.uci.edu: 1
+chemdb.ics.uci.edu: 6
+pepito.proteomics.ics.uci.edu: 1
+mine10.ics.uci.edu: 1
+virus.proteomics.ics.uci.edu: 1
+cdb.ics.uci.edu: 10
+gonet.genomics.ics.uci.edu: 7
+None: 1
+mlphysics.ics.uci.edu: 27
+www.ics.uci.edu: 842

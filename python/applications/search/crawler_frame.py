@@ -64,6 +64,8 @@ class CrawlerFrame(IApplication):
                 if is_valid(l) and robot_manager.Allowed(l, self.UserAgentString):
                     lObj = ProducedLink(l, self.UserAgentString)
                     self.frame.add(lObj)
+                else:
+                    self.invalidLinks+=1
         if len(url_count) >= MAX_LINKS_TO_DOWNLOAD:
             self.done = True
     def writeAnalyticsToFile(self):
@@ -194,8 +196,12 @@ def clean_path(url):
         else:
             stack.append(path)
     new_path='/'.join(stack)
+    query=''
+    if parsed.query!='':
+        query='?'+parsed.query
     #returns a new built url
-    return parsed.scheme+'://'+parsed.netloc+new_path+parsed.query
+    # returns http:://google.com?red=3 http::google.comred=
+    return parsed.scheme+'://'+parsed.netloc+new_path+query
 
 #check repeating directory. If a directory path is repeated x amount of times or a string. Its a trap
 def check_rep(url, x=3):
@@ -211,8 +217,8 @@ def check_rep(url, x=3):
             if (path=='..' or path=='.'):
                 return True
             if path_count[path]>x:
-                with open('traps.txt', 'a') as anaFile:
-                    anaFile.write('traps:'+str(parsed.hostname)+str(parsed.path)+'\t Reapeated path\n')
+                #with open('traps.txt', 'a') as anaFile:
+                    #anaFile.write('traps:'+str(parsed.hostname)+str(parsed.path)+'\t Reapeated path\n')
                 return True
         else:
             path_count[path]=1
@@ -246,8 +252,8 @@ def check_trap(url, x=5):
                          return 0
              if parsed.path in subdomains[parsed.hostname]:
                  if subdomains[parsed.hostname][parsed.path] >= x:
-                     with open('traps.txt', 'a') as anaFile:
-                         anaFile.write('traps:'+str(parsed.hostname)+str(parsed.path)+' Query page was repeated x times\n')
+                     #with open('traps.txt', 'a') as anaFile:
+                         #anaFile.write('traps:'+str(parsed.hostname)+str(parsed.path)+' Query page was repeated x times\n')
 
                      return 1
     return 0

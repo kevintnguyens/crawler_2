@@ -1,0 +1,17 @@
+Invalid Links: 0
+Page With Most Outbound Links: http://www.ics.uci.edu/ugrad/degrees/degree_cs.php with 119 links
+
+Subdomain Counts:
+dynamo.ics.uci.edu: 2
+cgvw.ics.uci.edu: 1
+mhcid.ics.uci.edu: 1
+archive.ics.uci.edu: 2
+students.ics.uci.edu: 1
+malek.ics.uci.edu: 1
+cloudberry.ics.uci.edu: 1
+sli.ics.uci.edu: 1
+ngs.ics.uci.edu: 1
+None: 1
+isr.uci.edu: 3
+hombao.ics.uci.edu: 1
+www.ics.uci.edu: 102

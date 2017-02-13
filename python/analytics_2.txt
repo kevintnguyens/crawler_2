@@ -1,0 +1,17 @@
+Invalid Links: 0
+Page With Most Outbound Links: http://www.ics.uci.edu/faculty/index.php?letter=J with 130 links
+
+Subdomain Counts:
+ftp.ics.uci.edu: 2
+chenli.ics.uci.edu: 1
+isr.uci.edu: 3
+archive.ics.uci.edu: 1
+radicle.ics.uci.edu: 2
+cloudberry.ics.uci.edu: 1
+asterix.ics.uci.edu: 1
+mlearn.ics.uci.edu: 1
+www.cs.uci.edu: 1
+fano.ics.uci.edu: 1
+None: 1
+hombao.ics.uci.edu: 1
+www.ics.uci.edu: 284

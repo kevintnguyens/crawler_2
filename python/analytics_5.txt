@@ -1,0 +1,24 @@
+Invalid Links: 0
+Page With Most Outbound Links: https://duttgroup.ics.uci.edu/doku.php/group?image=mitsuyama-yukio.jpg&rev=1376463247&mediado=diff&do=media&tab_files=files&tab_details=history&ns= with 192 links
+
+Subdomain Counts:
+dynamo.ics.uci.edu: 1
+mlphysics.ics.uci.edu: 28
+isr.uci.edu: 2
+archive.ics.uci.edu: 1
+seal.ics.uci.edu: 3
+students.ics.uci.edu: 1
+computableplant.ics.uci.edu: 1
+betapro.proteomics.ics.uci.edu: 1
+duttgroup.ics.uci.edu: 59
+mupro.proteomics.ics.uci.edu: 1
+virus.proteomics.ics.uci.edu: 1
+cdb.ics.uci.edu: 3
+mlearn.ics.uci.edu: 1
+gonet.genomics.ics.uci.edu: 2
+fano.ics.uci.edu: 1
+closeup.ics.uci.edu: 1
+None: 1
+chemdb.ics.uci.edu: 8
+www.ics.uci.edu: 150
+ibook.ics.uci.edu: 1
