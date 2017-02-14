@@ -1,0 +1,45 @@
+Invalid Links: 418202
+Page With Most Outbound Links: https://duttgroup.ics.uci.edu/doku.php/drg101_admin?image=yuko.jpg&ns=&tab_details=view&do=media&tab_files=files 
+with: 189 
+links
+
+Subdomain Counts:
+archive.ics.uci.edu: 6
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+cert.ics.uci.edu: 3
+duttgroup.ics.uci.edu: 6
+sli.ics.uci.edu: 2
+fano.ics.uci.edu: 8
+ngs.ics.uci.edu: 7
+mondego.ics.uci.edu: 2
+graphics.ics.uci.edu: 2
+evoke.ics.uci.edu: 1
+jgarcia.ics.uci.edu: 3
+mhcid.ics.uci.edu: 1
+students.ics.uci.edu: 1
+cloudberry.ics.uci.edu: 1
+sherlock.ics.uci.edu: 1
+auge.ics.uci.edu: 1
+ischool.uw.edu: 1
+hobbes.ics.uci.edu: 1
+seal.ics.uci.edu: 5
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 397
+grape.ics.uci.edu: 1
+computableplant.ics.uci.edu: 3
+cml.ics.uci.edu: 1
+cbcl.ics.uci.edu: 1
+calendar.ics.uci.edu: 1
+vision.ics.uci.edu: 9
+i-sensorium.ics.uci.edu: 1
+emj.ics.uci.edu: 8
+ftp.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+codeexchange.ics.uci.edu: 1
+testlab.ics.uci.edu: 1
+honors.ics.uci.edu: 2
+www.cs.uci.edu: 1
+None: 1
+jujube.ics.uci.edu: 1
+pregelix.ics.uci.edu: 1

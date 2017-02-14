@@ -1,0 +1,33 @@
+Invalid Links: 2357
+Page With Most Outbound Links: http://www.ics.uci.edu/~wscacchi/ 
+with: 250 
+links
+
+Subdomain Counts:
+archive.ics.uci.edu: 5
+cert.ics.uci.edu: 1
+esl.ics.uci.edu: 1
+emj.ics.uci.edu: 4
+sli.ics.uci.edu: 3
+fano.ics.uci.edu: 7
+ngs.ics.uci.edu: 3
+mondego.ics.uci.edu: 1
+graphics.ics.uci.edu: 1
+evoke.ics.uci.edu: 1
+jgarcia.ics.uci.edu: 2
+xtune.ics.uci.edu: 1
+sconce.ics.uci.edu: 1
+students.ics.uci.edu: 3
+sourcerer.ics.uci.edu: 1
+mlearn.ics.uci.edu: 1
+computableplant.ics.uci.edu: 1
+hobbes.ics.uci.edu: 1
+seal.ics.uci.edu: 2
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 181
+grape.ics.uci.edu: 2
+isr.uci.edu: 1
+sprout.ics.uci.edu: 1
+vision.ics.uci.edu: 4
+duttgroup.ics.uci.edu: 6
+None: 1

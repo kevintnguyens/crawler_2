@@ -1,0 +1,38 @@
+Invalid Links: 8816
+Page With Most Outbound Links: http://www.ics.uci.edu/~agelfand/largeFam3.html 
+with: 1089 
+links
+
+Subdomain Counts:
+archive.ics.uci.edu: 5
+www-db.ics.uci.edu: 1
+flamingo.ics.uci.edu: 2
+ironwood.ics.uci.edu: 1
+cert.ics.uci.edu: 1
+emj.ics.uci.edu: 7
+sli.ics.uci.edu: 1
+fano.ics.uci.edu: 6
+ngs.ics.uci.edu: 4
+mondego.ics.uci.edu: 1
+graphics.ics.uci.edu: 1
+evoke.ics.uci.edu: 3
+xtune.ics.uci.edu: 1
+isg.ics.uci.edu: 1
+mhcid.ics.uci.edu: 1
+students.ics.uci.edu: 5
+sourcerer.ics.uci.edu: 1
+mlearn.ics.uci.edu: 1
+computableplant.ics.uci.edu: 2
+hobbes.ics.uci.edu: 1
+sdcl.ics.uci.edu: 3
+www.ics.uci.edu: 247
+grape.ics.uci.edu: 2
+sprout.ics.uci.edu: 4
+asterix.ics.uci.edu: 1
+cml.ics.uci.edu: 2
+vision.ics.uci.edu: 8
+duttgroup.ics.uci.edu: 3
+dynamo.ics.uci.edu: 1
+www.michaelfranz.com: 1
+None: 1
+hombao.ics.uci.edu: 1
